@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Mate academy</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+<form action="https://mate-academy-form-lesson.herokuapp.com/create-application" onsubmit="onSubmit()">
+<fieldset class="fieldset">
+  <legend>Personal information</legend>
+
+  <label>Surname:<input class="inputForm" name="Surname" autocomplete="of" type="text" maxlength="32" minlength="2"></label><br/>
+  <label>Name:<input name="Name" autocomplete="of" class="inputForm" type="text" maxlength="32" minlength="2"></label><br/>
+  <label>How old are You? <input type="number" class="inputForm" min="12" max="100" name="old"></label><br/>
+  <label>Full date of birth <input type="date" class="inputForm" name="dateOfBirth"></label><br/>
+  <label>I accept the term of the agreement <input type="checkbox" class="inputForm" name="i_agree"></label>
+</fieldset>
+
+<fieldset class="fieldset">
+  <legend>Registration</legend>
+
+<label>Email <input type="email" autocomplete="of" name="email" class="inputForm" placeholder="email@example.com" required>
+</label><br/>
+<label>Password <input type="password" autocomplete="of" class="inputForm" name="password">
+</label>
+</fieldset>
+
+<fieldset class="fieldset">
+  <legend>An interesting fact about you!</legend>
+
+  Do you love cats?
+  <label class="inputForm">
+    <input type="radio" value="yes_love_cats" name="love_cats">Yes
+  </label>
+  <label>
+    <input type="radio"value="no_love_cats" name="love_cats">No
+  </label><br/>
+
+  <label>What is your favorite color? <input class="inputForm" type="color" name="favorite_color"></label><br/>
+  <label>What time do you go to bed <input type="time" class="inputForm" name="time_bed"></label><br/>
+
+  <label>What are you favorite brands of car? 
+    <select name="fav_brand_car" class="inputForm" multiple>
+      <option disabled selected>make a choice</option>
+      <option value="BMW">BMW</option>
+      <option value="Audi">Audi</option>
+      <option value="Tesla">Tesla</option>
+    </select>
+  </label><br>
+
+  <label>How do you rate our work? <input name="rate_our_work" class="inputForm" type="range" min="0" max="10" value="0" ></label>
+</fieldset>
+
+<fieldset class="fieldset">
+  <legend>Additional info</legend>
+
+  <label>Comments <textarea autocomplete="of" class="inputForm"></textarea></label><br>
+  <label>Would you recommend us? <select class="inputForm">
+    <option value="yes">yes</option>
+    <option value="no">no</option>
+  </select></label>
+</fieldset>
+<button type="submit">Submit</button>
+</form>
+  </body>
+</html>
