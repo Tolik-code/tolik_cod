@@ -1,68 +1,64 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Mate academy</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <meta name="theme-color" content="#531b53">
   </head>
-
   <body>
-<form action="https://mate-academy-form-lesson.herokuapp.com/create-application" onsubmit="onSubmit()">
-<fieldset class="fieldset">
-  <legend>Personal information</legend>
+    <div class="container">
+      <div class="game-header">
+        <h1>2048</h1>
+        <div class="controls">
+          <p class="info">
+            Score: <span class="game-score">0</span>
+          </p>
+          <button class="button start">Start</button>
+        </div>
+      </div>
 
-  <label>Surname:<input class="inputForm" name="Surname" autocomplete="of" type="text" maxlength="32" minlength="2"></label><br/>
-  <label>Name:<input name="Name" autocomplete="of" class="inputForm" type="text" maxlength="32" minlength="2"></label><br/>
-  <label>How old are You? <input type="number" class="inputForm" min="12" max="100" name="old"></label><br/>
-  <label>Full date of birth <input type="date" class="inputForm" name="dateOfBirth"></label><br/>
-  <label>I accept the term of the agreement <input type="checkbox" class="inputForm" name="i_agree"></label>
-</fieldset>
+      <table class="game-field">
+        <tbody>
+          <tr class="field-row">
+            <td class="field-cell"></td>
+            <td class="field-cell"></td>
+            <td class="field-cell"></td>
+            <td class="field-cell"></td>
+          </tr>
 
-<fieldset class="fieldset">
-  <legend>Registration</legend>
+          <tr class="field-row">
+            <td class="field-cell"></td>
+            <td class="field-cell"></td>
+            <td class="field-cell"></td>
+            <td class="field-cell"></td>
+          </tr>
 
-<label>Email <input type="email" autocomplete="of" name="email" class="inputForm" placeholder="email@example.com" required>
-</label><br/>
-<label>Password <input type="password" autocomplete="of" class="inputForm" name="password">
-</label>
-</fieldset>
 
-<fieldset class="fieldset">
-  <legend>An interesting fact about you!</legend>
+          <tr class="field-row">
+            <td class="field-cell"></td>
+            <td class="field-cell"></td>
+            <td class="field-cell"></td>
+            <td class="field-cell"></td>
+          </tr>
 
-  Do you love cats?
-  <label class="inputForm">
-    <input type="radio" value="yes_love_cats" name="love_cats">Yes
-  </label>
-  <label>
-    <input type="radio"value="no_love_cats" name="love_cats">No
-  </label><br/>
 
-  <label>What is your favorite color? <input class="inputForm" type="color" name="favorite_color"></label><br/>
-  <label>What time do you go to bed <input type="time" class="inputForm" name="time_bed"></label><br/>
+          <tr class="field-row">
+            <td class="field-cell"></td>
+            <td class="field-cell"></td>
+            <td class="field-cell"></td>
+            <td class="field-cell"></td>
+          </tr>
+        </tbody>
+      </table>
 
-  <label>What are you favorite brands of car? 
-    <select name="fav_brand_car" class="inputForm" multiple>
-      <option disabled selected>make a choice</option>
-      <option value="BMW">BMW</option>
-      <option value="Audi">Audi</option>
-      <option value="Tesla">Tesla</option>
-    </select>
-  </label><br>
-
-  <label>How do you rate our work? <input name="rate_our_work" class="inputForm" type="range" min="0" max="10" value="0" ></label>
-</fieldset>
-
-<fieldset class="fieldset">
-  <legend>Additional info</legend>
-
-  <label>Comments <textarea autocomplete="of" class="inputForm"></textarea></label><br>
-  <label>Would you recommend us? <select class="inputForm">
-    <option value="yes">yes</option>
-    <option value="no">no</option>
-  </select></label>
-</fieldset>
-<button type="submit">Submit</button>
-</form>
+      <div class="message-container">
+        <p class="message message-lose hidden">You lose! Restart the game?</p>
+        <p class="message message-win hidden">Winner! Congrats! You did it!</p>
+        <p class="message message-start">Press "Start" to begin game. Good luck!</p>
+      </div>
+    </div>
+    <script type="text/javascript" src="scripts/main.js"></script>
   </body>
 </html>
